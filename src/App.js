@@ -1,25 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './routes/home';
+import About from './routes/about';
+import Position from './routes/position';
+import CreatePosition from './routes/createPosition';
+import Error from './routes/error';
+
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+
+import {Amplify} from 'aws-amplify';
+import awsconfig from './aws-exports'
+import { withAuthenticator  } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import ReactGA from "react-ga4";
+ 
+//ReactGA.initialize("G-CYWQVSZCQT");
+//ReactGA.send("pageview");
+
+Amplify.configure(awsconfig);
+
+function App({ user }) {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div style={{minHeight: '85vh'}}>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home  userdata={user}  />} />
+      <Route path="/about" element={<About   />} />
+      <Route path="/position/:id" element={<Position   userdata={user} />} />
+      <Route path="/create_position" element={<CreatePosition />} />
+      {/* error pages. */}
+      <Route path="*" element={<Error   />} />
+    </Routes>
     </div>
+    <Footer />
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default withAuthenticator(App);

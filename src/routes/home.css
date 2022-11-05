@@ -1,0 +1,153 @@
+.leaflet-container {
+    width: 100%;
+    height: 70vh;
+} 
+
+/* leaflet draw */
+.sr-only {
+    display: none;
+  }
+
+/* form */
+.create-form {
+    position:absolute;
+    z-index: 1500;   
+    /* In order for z-index to work, you'll 
+    need to give the element a position:absolute or a 
+    position:relative property.   */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 4%;
+    /* margin: 0 auto; */
+    text-align: center;
+    background-color: white;
+}
+.form{
+    margin: 12px;
+}
+.button-form {
+    margin-bottom: 15px;
+}
+.create-form label {
+    text-align: left;
+    display: block;
+}
+.create-form h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
+}
+.create-form input, .create-form textarea, .create-form select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+.button-form {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.coords-map{
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    width: 90%;
+    min-width: 350px;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    font-size: 20px;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    color: #000;
+    /* background: #D6EAF8; */
+    margin-top: 7px;
+}
+
+.title-popup{
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.descr-popup{
+    font-size: 1.4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+.date-popup{
+    font-size: 1.4em;
+    font-weight: 550;
+    text-align: right;
+    font-family: 'PT Serif', serif;
+}
+.coords-popup{
+    text-align: right;
+    font-family: 'PT Serif', serif;
+    margin-top: 16px;
+    font-size: 1.6em;
+    font-family: 'PT Serif', serif;
+    margin: 18px 0;
+}
+
+.menu{
+    margin-top: 18px;
+}
+
+.post-preview-img{
+    display: flex;
+    justify-content:space-between;
+}
+.post-meta{
+    text-align: right;
+    margin-right: 20px;
+}
+.post-subtitle{
+    margin-left: 30px;
+}
+.my-position{
+    font-size: 1.1rem;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+}
+.left-table{
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+}
+.leftTabEl{
+    font-size: 1.1rem;
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+}
+.post-preview-img{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.form-coords{
+    font-size: 1.2rem;
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    text-align: center !important;
+}
+.label-form{
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-family: 'PT Serif', serif;
+}
+
+.date-format{
+    font-family: 'PT Serif', serif;
+}
