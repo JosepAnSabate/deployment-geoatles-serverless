@@ -45,7 +45,7 @@ export default function Navbar() {
                     changeMenuOn="600px"
                     menu={
                             <ul className='nav-list'>
-                            <CustomLink to="/about" className="text-nav">About</CustomLink> 
+                            <CustomLink to="/about" className="text-nav">Altres</CustomLink> 
                             <CustomLink to="/create_position" className="text-nav">Nova Posició</CustomLink> 
                             <li className='nav-button' style={{marginTop:'10px'}}><button className="sign-out text-nav" onClick={signOut}>Tanca Sessió</button></li> 
                             </ul>
