@@ -15,10 +15,11 @@ import awsconfig from './aws-exports'
 import { withAuthenticator  } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import ReactGA from "react-ga4";
+import ReactGA from "react-ga";
  
-//ReactGA.initialize("G-CYWQVSZCQT");
-//ReactGA.send("pageview");
+ReactGA.initialize("G-FLX3NVVBM8");
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 Amplify.configure(awsconfig);
 
