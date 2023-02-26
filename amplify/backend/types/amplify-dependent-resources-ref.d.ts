@@ -3,11 +3,14 @@ export type AmplifyDependentResourcesAttributes = {
         "deploygeoatlessf4410336": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
+            "HostedUIDomain": "string",
+            "OAuthMetadata": "string",
             "UserPoolId": "string",
+            "UserPoolArn": "string",
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
             "AppClientID": "string",
-            "AppClientSecret": "string"
+            "CreatedSNSRole": "string"
         }
     }
 }

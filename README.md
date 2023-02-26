@@ -20,4 +20,6 @@ Source: [https://www.icgc.cat/Administracio-i-empresa/Serveis/Geologia/WMS-Carto
 <br> <br> <br> 
 
 wa\geoatlesserverless_new
+amplify push
+amplify publish
 

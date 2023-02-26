@@ -16,15 +16,17 @@ import { withAuthenticator  } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactGA from "react-ga";
- 
-ReactGA.initialize("G-FLX3NVVBM8");
-ReactGA.pageview(window.location.pathname + window.location.search);
+import { useEffect } from 'react';
+ReactGA.initialize("UA-246280405-1");
 
 
 Amplify.configure(awsconfig);
 
 function App({ user }) {
-  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <BrowserRouter>
     <div style={{minHeight: '85vh'}}>

@@ -264,7 +264,7 @@ function Home (user){
     function GetFeatureInfo(props) {
       const { url, options,layers } = props;
       const map = useMap()
-
+      
       useEffect(() => {
         let MySourceWMS = WMS.Source.extend({
             ajax: function (url, callback) {
@@ -286,7 +286,7 @@ function Home (user){
               let evitabug = 3;
           },       
           });
-        new MySourceWMS(url, options).getLayer(layers).addTo(map);
+        new MySourceWMS(url, options).getLayer(layers).addTo(map)//.bringToBack();
       }, [])
      
     //console.log("getInfo",typeof getInfo, getInfo);
@@ -420,15 +420,17 @@ function Home (user){
         }}
         url="https://geoserveis.icgc.cat/arcgis/services/geologic/icgc_mg50m/MapServer/WMSServer"
       />    */}
-      <GetFeatureInfo 
+      <GetFeatureInfo
         layers={['UGEO_PA']}
         options={{
           "format": "image/png",
-          "transparent": "true",
+          "transparent": true,
           "info_format": "text/plain",
+          "maxZoom": 7// avoid show wms on the map
         }}
         url="https://geoserveis.icgc.cat/arcgis/services/geologic/icgc_mg50m/MapServer/WMSServer"
       />  
+      
       </MapContainer>
       {/* {"lat" in mousePosition && 
       <> 
